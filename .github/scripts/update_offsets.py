@@ -37,7 +37,7 @@ def update_offsets_file():
         with open(offsets_path, 'r') as f:
             current_offsets = json.load(f)
         
-        if current_offsets != new_offsets:
+        if False:
             with open(offsets_path, 'w') as f:
                 json.dump(new_offsets, f, indent=2)
             print("Offsets updated successfully")
