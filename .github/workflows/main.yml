@@ -22,9 +22,6 @@ jobs:
         id: update
         run: |
           python .github/scripts/update_offsets.py
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
 
       - name: Setup Node.js
         if: steps.update.outputs.changed == 'true'
