@@ -22,6 +22,7 @@ jobs:
         id: update
         run: |
           python .github/scripts/update_offsets.py
+          echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Setup Node.js
         if: steps.update.outputs.changed == 'true'
