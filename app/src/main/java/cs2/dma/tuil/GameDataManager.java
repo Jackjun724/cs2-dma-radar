@@ -116,7 +116,7 @@ public class GameDataManager {
             mapNameAddress = memoryTool.getModuleAddress("matchmaking.dll");
             mapNameAddress = memoryTool.readAddress(mapNameAddress + dwGameTypes + dwGameTypes_mapName, 8);
             EntityList = memoryTool.readAddress(clientAddress + dwEntityList, 8);
-            System.out.println("[+] CS2 Client entityList value: " + EntityList);
+            System.out.println("[+] CS2 Client entityList value: " + EntityList + "    Offset: " + dwEntityList);
             EntityList = memoryTool.readAddress(EntityList + 0x10, 8);
                                
             if (EntityList == 0) {
